@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    background: transparent;
+}
+
+#logo-container {
+    position: absolute;
+    z-index: 9999;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    will-change: opacity, transform;
+}
+
+#logo-container.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+#logo-container.top-right {
+    top: 20px;
+    right: 20px;
+}
+
+#logo-container.top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#logo-container.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+#logo-container.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
+
+#logo-container.bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#logo-container.center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#server-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.logo-hidden {
+    opacity: 0 !important;
+    visibility: hidden;
+}
+
+.logo-visible {
+    opacity: 0.8;
+    visibility: visible;
+}
+
+.fade-fast {
+    transition-duration: 0.15s !important;
+}
+
+.fade-normal {
+    transition-duration: 0.3s !important;
+}
+
+.fade-slow {
+    transition-duration: 0.5s !important;
+}
